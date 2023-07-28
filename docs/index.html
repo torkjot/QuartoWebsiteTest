@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -99,6 +65,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -140,7 +108,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#this-page-is-under-development" id="toc-this-page-is-under-development" class="nav-link active" data-scroll-target="#this-page-is-under-development">THIS PAGE IS UNDER DEVELOPMENT</a>
+  <ul class="collapse">
+  <li><a href="#integrated-watershed-area-model-objectives" id="toc-integrated-watershed-area-model-objectives" class="nav-link" data-scroll-target="#integrated-watershed-area-model-objectives">Integrated Watershed-Area Model Objectives</a></li>
+  <li><a href="#basic-ricker-model" id="toc-basic-ricker-model" class="nav-link" data-scroll-target="#basic-ricker-model">Basic Ricker Model</a></li>
+  <li><a href="#watershed-area-model" id="toc-watershed-area-model" class="nav-link" data-scroll-target="#watershed-area-model">Watershed Area Model</a></li>
+  <li><a href="#iwam-model-outline-reference" id="toc-iwam-model-outline-reference" class="nav-link" data-scroll-target="#iwam-model-outline-reference">IWAM Model Outline Reference</a></li>
+  <li><a href="#tmb-model-outline-reference" id="toc-tmb-model-outline-reference" class="nav-link" data-scroll-target="#tmb-model-outline-reference">TMB Model Outline Reference</a></li>
+  <li><a href="#dictionary-of-referenced-functions" id="toc-dictionary-of-referenced-functions" class="nav-link" data-scroll-target="#dictionary-of-referenced-functions">Dictionary of Referenced Functions</a></li>
+  <li><a href="#dictionary-of-terms-and-variables" id="toc-dictionary-of-terms-and-variables" class="nav-link" data-scroll-target="#dictionary-of-terms-and-variables">Dictionary of Terms and Variables</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -162,17 +145,150 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<p>This is a Quarto website.</p>
-<p>Testing new new new new</p>
-<p>To learn more about Quarto websites visit <a href="https://quarto.org/docs/websites" class="uri">https://quarto.org/docs/websites</a>.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
-</div>
-</div>
+<section id="this-page-is-under-development" class="level1">
+<h1>THIS PAGE IS UNDER DEVELOPMENT</h1>
+<section id="integrated-watershed-area-model-objectives" class="level2">
+<h2 class="anchored" data-anchor-id="integrated-watershed-area-model-objectives">Integrated Watershed-Area Model Objectives</h2>
+<p>[Insert] overall objective of IWAM model: The integrated watershed are model was developed by the Stock Assessment and Recruitment Team (DFO) for the purpose of estimating population statistics, SMSY and SREP, in low-data use-cases.</p>
+<section id="model-references" class="level4">
+<h4 class="anchored" data-anchor-id="model-references">Model References</h4>
+<p>This model was developed by (TEAM/WORKING GROUP) by interpreting the models of [Insert] publication references to e.g., Parken et al.&nbsp;2006, Liermann et al., etc.</p>
+</section>
+<section id="model-description" class="level4">
+<h4 class="anchored" data-anchor-id="model-description">Model Description</h4>
+<p>The equations and description below will walk you through the hierarchical structure of the IWAM model from raw input to final predictive estimates of spawners required for maximum sustainable yield (<span class="math inline">\(S_{MSY}\)</span>) and spawners required for replacement (<span class="math inline">\(S_{REP}\)</span>), including a detailed definitions list of all notation used and its corresponding label in the supplied repository code [<a href="https://github.com/carrieholt/Watershed-Area-Model">carrieholt/Watershed-Area-Model: Watershed Area Model (github.com)</a>].</p>
+</section>
+</section>
+<section id="basic-ricker-model" class="level2">
+<h2 class="anchored" data-anchor-id="basic-ricker-model">Basic Ricker Model</h2>
+<p><span class="math display">\[
+R = S e^{\alpha- \beta S}e^\tau
+\]</span></p>
+<p>Which contains the following terms: <span class="math inline">\(R\)</span> : recruitment per stock [numeric, often scaled], <span class="math inline">\(S\)</span> : Spawners or spawner abundance [numeric, often scaled], <span class="math inline">\(\alpha\)</span> : dimensionless number of recruits per spawner produced at very low spawner density [dimensionless], this may also be thought of as the intercept of the relationship between <span class="math inline">\(\frac{R}{S}\)</span> and <span class="math inline">\(S\)</span>, <span class="math inline">\(\beta\)</span> : the strength of the density dependence expressed as <span class="math inline">\(1/S_{MAX}\)</span> [<span class="math inline">\(spawners^{-1}\)</span>], similarly this can be described as the slope of the previously described relationship, <span class="math inline">\(\tau\)</span> : the normally distributed error. The base Ricker model is written in this form to reflect a stochastic process (time ordered and random) by adding the log-normal error term <span class="math inline">\(\tau\)</span>, a normal distributed term often used to account for environmental variability.</p>
+<section id="hierarchical-ricker-alpha-and-linear-form-ricker" class="level4">
+<h4 class="anchored" data-anchor-id="hierarchical-ricker-alpha-and-linear-form-ricker">Hierarchical Ricker (<span class="math inline">\(\alpha\)</span>) and Linear Form Ricker</h4>
+<p>This baseline form is then converted into the two following forms of a hierarchical Ricker (1) and a linearized Ricker (2).</p>
+<p><span class="math display">\[
+R_i = S_i \cdot e^{\alpha_i-\beta_i\cdot S_i}\cdot e^{\tau_i}
+\]</span></p>
+<p>Which is then linearized by log transformation into the form:</p>
+<p><span class="math display">\[
+log(\frac{R_i}{S_i}) = log(\alpha_i)-\beta_i \cdot S_i + \tau_i
+\]</span></p>
+<p>Where <span class="math inline">\(\tau \sim Normal(0, \sigma_\tau)\)</span></p>
+<p>and <span class="math inline">\(log(\alpha_i) \sim Normal(\mu Log(\alpha), SigmaLog(\alpha))\)</span>,</p>
+<p>and <span class="math inline">\(\mu log(\alpha_i) \sim Normal(1.5,5)\)</span>,</p>
+<p>and <span class="math inline">\(\sigma log(\alpha_i) \sim InvGamma(0.01,0.01)\)</span>.</p>
+<p>In this regard, <span class="math inline">\(\alpha\)</span> is the intercept and <span class="math inline">\(\beta\)</span> is the slope of the spawner-recruit relationship. The hyper-priors (incorrect term) on <span class="math inline">\(log(\alpha)\)</span> are likelihood penalties. In a frequentist model description, the penalizing function is a method for smoothing and to improve the sampling of the estimator - in this case [INSERT SAMPLER].</p>
+<p><strong>BIAS CORRECTION EQUATIONS?</strong></p>
+<p><strong>INSERT PRIOR DISTRIBUTION PLOTS</strong></p>
+</section>
+</section>
+<section id="watershed-area-model" class="level2">
+<h2 class="anchored" data-anchor-id="watershed-area-model">Watershed Area Model</h2>
+<p><span class="math display">\[
+ln(S_{MSY}) = ln(\delta_0) + \delta_1 \cdot ln(WA) + \delta_\epsilon
+\]</span></p>
+<p><span class="math display">\[
+ln(S_{REP}) = ln(\gamma_o) + \gamma_1 \cdot ln(WA) + \gamma_\epsilon
+\]</span></p>
+<p>where,</p>
+<p><span class="math display">\[
+\delta_\epsilon \sim N(0,\sigma_\delta^2)
+\]</span></p>
+<p><span class="math display">\[
+\delta_\gamma \sim N(0,\sigma^2_\gamma)
+\]</span></p>
+<p>Where <span class="math inline">\(\delta_0\)</span> is the intercept and <span class="math inline">\(\delta_1\)</span> is the slope for the relationship between watershed area and either <span class="math inline">\(S_{MSY}\)</span> and <span class="math inline">\(S_{REP}\)</span>. These are then adapted further to separate stream-type and ocean-type fish in the watershed area model. This is done by creating an offset with the baseline as the stream type population.</p>
+<p><span class="math display">\[
+ln(S_{MSY}) = ln(\delta_{0,stream}) + ln(\delta_{0,ocean}) \cdot X + (\delta_{1,stream} + \delta_{1,ocean} \cdot X) \cdot ln(WA) + \delta_\epsilon
+\]</span></p>
+<p>where, <span class="math inline">\(\delta_\epsilon \sim Normal(0,\sigma_\epsilon)\)</span> and <span class="math inline">\(X = 0\)</span> for stream type and <span class="math inline">\(X = 1\)</span> is for ocean type populations.</p>
+<section id="s_msy-and-s_rep-calculation" class="level4">
+<h4 class="anchored" data-anchor-id="s_msy-and-s_rep-calculation"><span class="math inline">\(S_{MSY}\)</span> and <span class="math inline">\(S_{REP}\)</span> Calculation</h4>
+<p><span class="math display">\[
+S_{MSY} = \frac{1-W(e^{1-(\alpha)})}{\beta}
+\]</span></p>
+<p><span class="math display">\[
+S_{REP} = \frac{\alpha}{\beta}
+\]</span></p>
+</section>
+</section>
+<section id="iwam-model-outline-reference" class="level2">
+<h2 class="anchored" data-anchor-id="iwam-model-outline-reference">IWAM Model Outline Reference</h2>
+<p>This section provides a walk through the 6 sections of the IWAM code repository and provided references to possible areas that may require changes depending on your intended usage case. The sections are as listed:</p>
+<ol type="1">
+<li>Read in data</li>
+<li>Create data and parameter lists for TMB
+<ol type="1">
+<li><p>Data Removals and Cleaning</p></li>
+<li><p>Scale Calculation</p></li>
+<li><p>Calculation of Survival Covariates</p></li>
+<li><p>Read in watershed area data and life-history type</p></li>
+</ol></li>
+<li>Estimate SR parameters from synoptic data set and SMSY and SREPs</li>
+<li>Compile model outputs</li>
+<li>Calculate diagnostics and plot SR curves, etc.
+<ol type="1">
+<li><p>Plot SR Curves</p></li>
+<li><p>Plot WA Regression</p></li>
+</ol></li>
+<li>Calculate prediction intervals for SMSY and SREP for additional stocks</li>
+</ol>
+</section>
+<section id="tmb-model-outline-reference" class="level2">
+<h2 class="anchored" data-anchor-id="tmb-model-outline-reference">TMB Model Outline Reference</h2>
+<p>This section is dedicated to providing a written guide to the format of the IWAM TMB model. The code is divided into the following sections:</p>
+</section>
+<section id="dictionary-of-referenced-functions" class="level2">
+<h2 class="anchored" data-anchor-id="dictionary-of-referenced-functions">Dictionary of Referenced Functions</h2>
+<p>This section provides a reference to all associated scripts that work alongside the IWAM.</p>
+<ul>
+<li><p>PlotSR.R: Features the following functions:</p>
+<ul>
+<li><p>t_col():</p></li>
+<li><p>PlotSRCurve():</p></li>
+<li><p>PlotSRLinear():</p></li>
+<li><p>PlotStdResid():</p></li>
+<li><p>Plotacf():</p></li>
+<li><p>plotWAregressionSMSY():</p></li>
+<li><p>plotWAregressionSREP():</p></li>
+<li><p>plotWAregression_Parken():</p></li>
+<li><p>plotWAregression_ParkenSep():</p></li>
+<li><p>plotRicA():</p></li>
+<li><p>plotTestStocks():</p></li>
+<li><p>plotSMSY():</p></li>
+<li><p>plotWCVIBenchmarks():</p></li>
+<li><p>plotWCVI_timeseries():</p></li>
+<li><p>plotWCVI_SMUtimeseries():</p></li>
+<li><p>plotLogistic():</p></li>
+<li><p>PlotAnnualIndicator():</p></li>
+</ul></li>
+<li><p>helperFunctions.R: Features the following functions:</p>
+<ul>
+<li><p>inv_logit():</p></li>
+<li><p>logit():</p></li>
+<li><p>gm_mean():</p></li>
+<li><p>count.dig():</p></li>
+<li><p>‘%not in%’:</p></li>
+<li><p>PredInt():</p></li>
+<li><p>sGenOptimum():</p></li>
+<li><p>sGenSolver():</p></li>
+<li><p>bEst():</p></li>
+<li><p>bSolver():</p></li>
+<li><p>Sgen.fn():</p></li>
+<li><p>Sgen.fn2():</p></li>
+<li><p>ggplot.corr():</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="dictionary-of-terms-and-variables" class="level2">
+<h2 class="anchored" data-anchor-id="dictionary-of-terms-and-variables">Dictionary of Terms and Variables</h2>
+<p>This section is provides a written reference to all key model variables cross-referenced between IWAM.R and the .cpp TMB file.</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
